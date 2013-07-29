@@ -240,3 +240,14 @@ a {
 .cf {
   zoom:1;
 }
+
+#sidebar {
+    float: left;
+    width: 180px;
+    margin-bottom: 80px;
+}
+
+#sidebar, #footer {
+    font-size: 12px;
+    line-height: 19px;
+}

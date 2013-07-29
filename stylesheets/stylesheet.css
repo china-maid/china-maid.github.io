@@ -242,7 +242,7 @@ a {
 }
 
 #sidebar {
-    float: left;
+    float: right;
     width: 180px;
     margin-bottom: 80px;
 }

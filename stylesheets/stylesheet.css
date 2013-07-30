@@ -245,8 +245,10 @@ a {
 
 #sidebar {
     float: left;
-    width: 20%;
+    width: 19%;
     margin-bottom: 80px;
+    border-style:solid;
+    border-color:grey;
 }
 
 #sidebar, #footer {

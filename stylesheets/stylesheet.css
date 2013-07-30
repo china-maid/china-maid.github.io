@@ -12,14 +12,14 @@ body {
 
 .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 978px;
   margin: 0 auto;
 }
 
 section {
     display: block;
     margin: 0 20px 20px 0;
-    width: 75%;
+    width: 80%;
     float:left;
 }
 
@@ -245,7 +245,7 @@ a {
 
 #sidebar {
     float: left;
-    width: 180px;
+    width: 20%;
     margin-bottom: 80px;
 }
 

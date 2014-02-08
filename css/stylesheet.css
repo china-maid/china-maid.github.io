@@ -1,15 +1,19 @@
 body {
-  margin: 0;
-  padding: 0;
-  background: #151515 url("../images/bkg.png") 0 0;
-  color: #eaeaea;
-  font: 16px;
-  line-height: 1.5;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	margin: 0;
+	padding: 0;
+	background: #151515 url("images/bkg.png") 0 0;
+	color: #eaeaea;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	min-height: 500px;
+	height: 100%;
+	position: relative;
 }
 
 /* General & 'Reset' Stuff */
-
+.header-container,
+.body-container,
 .container {
   width: 90%;
   max-width: 978px;
@@ -18,9 +22,8 @@ body {
 
 section {
     display: block;
-    margin: 0 20px 20px 0;
+    margin: 0 1em 1em 0;
     width: 78%;
-    float:left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,7 +51,7 @@ header {
 header h1 {
   font-size: 30px;
   line-height: 1.5;
-  margin: 0 0 0 -40px;
+/*  margin: 0 0 0 -40px;*/
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: #b5e853;
@@ -125,11 +128,18 @@ dt {
   font-style: italic;
   font-weight: bold;
 }
-
+ul{
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0;
+}
 ul li {
-  list-style: none;
+ 	list-style: none;
 }
 
+/*
 ul li:before {
   content: ">>";
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -139,6 +149,7 @@ ul li:before {
   margin-right: 21px;
   line-height: 16px;
 }
+*/
 
 blockquote {
   color: #aaa;
@@ -182,8 +193,7 @@ hr {
   color: #b5e853;
 }
 
-/* Buttons
-*/
+/* Buttons */
 
 .btn {
   display: inline-block;
@@ -216,7 +226,7 @@ hr {
 
 .btn-github .icon {
   opacity: 0.6;
-  background: url("../images/blacktocat.png") 0 0 no-repeat;
+  background: url("images/blacktocat.png") 0 0 no-repeat;
 }
 
 /* Links
@@ -242,6 +252,15 @@ a {
 .cf {
   zoom:1;
 }
+.header-container{
+/*	position: relative;*/
+}
+header nav ul > li {
+	float:left;
+	display:inline-block;
+	margin:0 30px;
+}
+
 
 #sidebar {
     float: left;

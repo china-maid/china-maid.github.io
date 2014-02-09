@@ -29,3 +29,10 @@
 .glowing-puzzle-game tr td.white{
 	background-color: white;
 }
+.counter{
+	margin:auto; 
+	width:20%;
+}
+.counter label{
+	font-size: 30px;
+}

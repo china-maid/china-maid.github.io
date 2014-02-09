@@ -1,0 +1,31 @@
+.glowing-puzzle-game{
+	
+}
+/*.glowing-puzzle-game tr,*/
+
+.glowing-puzzle-game-target,
+.glowing-puzzle-game{
+	width:160px;
+	margin:auto;
+}
+.glowing-puzzle-game-target tr,
+.glowing-puzzle-game tr{
+	height:40px;
+}
+.glowing-puzzle-game-target tr td,
+.glowing-puzzle-game tr td{
+	width:20px;
+	height:20px;
+}
+.glowing-puzzle-game-target tr td.red,
+.glowing-puzzle-game tr td.red{
+	background-color: red;
+}
+.glowing-puzzle-game-target tr td.blue,
+.glowing-puzzle-game tr td.blue{
+	background-color: blue;
+}
+.glowing-puzzle-game-target tr td.white,
+.glowing-puzzle-game tr td.white{
+	background-color: white;
+}

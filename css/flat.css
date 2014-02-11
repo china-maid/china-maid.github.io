@@ -1,0 +1,31 @@
+@charset "utf-8";
+/****  font  ****/
+body{
+	background-color:purple;
+	position: relative;
+	font-size:20px;
+}
+body > div{
+	position: absolute;
+}
+
+/****  block  ****/
+.block-small{
+	width:3em;
+	height:3em;
+}
+
+
+/**** color  ****/
+.bgcolor-red{
+	background-color: red;
+}
+.bgcolor-green{
+	background-color: green;
+}
+.bgcolor-blue{
+	background-color: blue;
+}
+
+
+/****  animation  ****/

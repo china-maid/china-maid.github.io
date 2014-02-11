@@ -9,15 +9,17 @@ body {
 	min-height: 500px;
 	height: 100%;
 	position: relative;
+	min-width: 320px;
 }
 
 /* General & 'Reset' Stuff */
 .header-container,
 .body-container,
 .container {
-  width: 90%;
-  max-width: 978px;
-  margin: 0 auto;
+	width: 90%;
+	max-width: 978px;
+	min-width: 320px;
+	margin: 0 auto;
 }
 
 section {
@@ -77,9 +79,14 @@ header h2 {
 /* Main Content
 */
 
-#main_content {
-  width: 75%;
-  -webkit-font-smoothing: antialiased;
+.main_content {
+	width: 70%;
+	min-width: 320px;
+	-webkit-font-smoothing: antialiased;
+}
+aside{
+	float:right;
+	width: 30%;
 }
 section img {
   max-width: 100%
@@ -102,7 +109,9 @@ h1, h2, h3, h4, h5, h6 {
 #main_content h2 {
   font-size: 24px;
 }
-
+.article-sum-list article{
+	margin-right:1em;
+}
 #main_content h3 {
   font-size: 18px;
 }
@@ -258,7 +267,8 @@ a {
 header nav ul > li {
 	float:left;
 	display:inline-block;
-	margin:0 30px;
+/*	margin:0 30px;*/
+	margin-right: 6%
 }
 
 
@@ -275,4 +285,7 @@ header nav ul > li {
 #sidebar, #footer {
     font-size: 12px;
     line-height: 19px;
+}
+article{
+	
 }

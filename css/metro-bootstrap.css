@@ -4148,10 +4148,11 @@ a {
   float: left;
   width: 100%;
   padding: 15px;
-  line-height: 15px;
+  line-height: 20px;
   color: inherit;
   font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
-  font-size: 14px;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 .metro .navigation-bar .element-menu > li > a.dropdown-toggle,
 .metro .navbar .element-menu > li > a.dropdown-toggle {
@@ -4736,7 +4737,7 @@ a {
 }
 .metro .tile-group .tile-group-title {
   font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 2em;
   line-height: 20px;
   position: absolute;
   top: 10px;

@@ -71,29 +71,27 @@ function canMove(whiteblock, direction){
 function move(whiteblock, direction){
 	var row=parseInt(whiteblock.dataset.r);
 	var col=parseInt(whiteblock.dataset.c);
+	var nextBlock = null;
 	switch(direction){
 		case up:{
-			var upblock = document.querySelector("td#t"+(row-1)+col);
-			switchBlock(whiteblock, upblock);
+			var nextBlock = document.querySelector("td#t"+(row-1)+col);
 			break;
 		}
 		case down:{
-			var downblock = document.querySelector("td#t"+(row+1)+col);
-			switchBlock(whiteblock, downblock);
+			var nextBlock = document.querySelector("td#t"+(row+1)+col);
 			break;
 		}
 		case left:{
-			var leftblock = document.querySelector("td#t"+row+(col-1));
-			switchBlock(whiteblock, leftblock);
+			var nextBlock = document.querySelector("td#t"+row+(col-1));
 			break;
 		}
 		case right:{
-			var rightblock = document.querySelector("td#t"+row+(col+1));
-			switchBlock(whiteblock, rightblock);
+			var nextBlock = document.querySelector("td#t"+row+(col+1));
 			break;
 		}
 	}
 
+	switchBlock(whiteblock, nextBlock);
 	var counter = parseInt(document.querySelector("#counterlabel").innerText);
 
 	if(blkback(direction)){
@@ -106,8 +104,9 @@ function move(whiteblock, direction){
 		log.appendChild(newc);
 		counter+=1;
 	}
-
 	document.querySelector("#counterlabel").innerText=counter;
+	updateNumbers();
+//	updateLastStep();
 }
 function blkback(direction){
 	var oldct = log.children[(log.children.length-1)].innerText;
@@ -136,9 +135,96 @@ function blkback(direction){
 }
 function switchBlock(block1, block2){
 	var block2class=block2.classList[0];
-	var block2value=block2.innerText;
+//	var block2value=block2.innerText;
 	block2.className = block1.className;
-	block2.innerText = block1.innerText;
+//	block2.innerText = block1.innerText;
 	block1.className = block2class;
-	block1.innerText = block2value;
+//	block1.innerText = block2value;
+	
+	
+}
+function updateNumbers(){
+	var tds = document.querySelectorAll(".glowing-puzzle-game td");
+	var sum = 0;
+	for(var i=0;i<tds.length;i++){
+		var text = 0;
+		var td = tds[i];
+		var tdcolor = td.classList[0];
+		var column = td.dataset.c;
+		switch(tdcolor){
+			case "red":{
+				switch(column){
+					case "3":{
+						text = 1;
+						break;
+					}
+					case "4":{
+						text = 2;
+						break;
+					}
+				}
+				break;
+			}
+			case "blue":{
+				switch(column){
+					case "2":{
+						text = 1;
+						break;
+					}
+					case "1":{
+						text = 2;
+						break;
+					}
+				}
+				break;
+			}
+		}
+		sum += text;
+		td.innerText = text;
+	}
+	
+	
+	
+	
+	var newWhiteBlock = document.querySelector(".white");
+	var whiteHorizontalDistance = parseInt(newWhiteBlock.dataset.c) - 1;
+	var whiteVerticalDistance = parseInt(newWhiteBlock.dataset.r) - 1;
+//	var whiteDistance = whiteHorizontalDistance + whiteVerticalDistance;
+	var whiteDistance = (whiteHorizontalDistance + whiteVerticalDistance) > 0 ? 1 : 0;
+	newWhiteBlock.innerText = whiteDistance;
+	sum += whiteDistance;
+	document.querySelector("#remainLabel").innerText = sum;
+	
+}
+function updateLastStep(){
+	var logwrapper = document.querySelector("#log");
+	var lastlog = logwrapper.children[logwrapper.length-1];
+	switch(lastlog){
+		case up:{
+			
+			break;
+		}
+		case down:{
+			
+			break;
+		}
+		case left:{
+			
+			break;
+		}
+		case right:{
+			
+			break;
+		}
+	}
+}
+//==============================================================
+var availableDirection = null;
+var remainShortest = -1;
+var remainBlockCount = -1;
+
+function startAutoMove(){
+//	while(auto_canmove()){
+//		
+//	}
 }

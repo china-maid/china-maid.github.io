@@ -19,11 +19,11 @@
 }
 .glowing-puzzle-game-target tr td.red,
 .glowing-puzzle-game tr td.red{
-	background-color: red;
+	background-color: rgb(255,0,0);
 }
 .glowing-puzzle-game-target tr td.blue,
 .glowing-puzzle-game tr td.blue{
-	background-color: blue;
+	background-color: rgb(0,0,255);
 }
 .glowing-puzzle-game-target tr td.white,
 .glowing-puzzle-game tr td.white{
@@ -35,4 +35,13 @@
 }
 .counter label{
 	font-size: 30px;
+}
+table{
+	table-layout: fixed;
+}
+td{
+	text-align: center;
+}
+code{
+	width:100px;
 }

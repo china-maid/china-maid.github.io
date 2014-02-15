@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="/css/glowing.css" media="screen" />
 	<link rel="stylesheet" href="/css/metro-bootstrap.css">
 	<link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">
+	<link rel="stylesheet" href="/css/index.css">
 	<link rel="stylesheet" href="/js/prettify/prettify.css">
 	<script src="/js/jquery/jquery.min.js"></script>
 	<script src="/js/jquery/jquery.widget.min.js"></script>
@@ -28,8 +29,52 @@
 				* You can't move red block to from left to right in this mode.
 			</p>
 			<a href="glowing.html" style="margin-left:70%;">Initial</a>
+			<div id="log" style="position:absolute;right:calc(50% - 150px);">
+				<p>log</p>
+			</div>
+			<div style="position:absolute;left:calc(50% - 200px);">
+				<pre><code>
+down 
+right 
+down
+down 
+left 
+up 
+right
+right 
+down 
+left 
+up 
+right 
+down 
+right 
+up 
+left
+left 
+down 
+right 
+up
+up
+up 
+left 
+down 
+right
+right 
+up 
+left
+left
+left 
+down 
+right
+right 
+up 
+left
+left 
+				</code></pre>
+			</div>
 			<div>
 				<table class="glowing-puzzle-game">
+<!--
 					<tr>
 						<td id="t11" class="white" data-r="1" data-c="1">0</td>
 						<td id="t12" class="blue" data-r="1" data-c="2">2</td>
@@ -54,32 +99,57 @@
 						<td id="t43" class="blue" data-r="4" data-c="3">2</td>
 						<td id="t44" class="red" data-r="4" data-c="4">1</td>
 					</tr>
+-->
+					<tr>
+						<td id="t11" class="white" data-r="1" data-c="1">0</td>
+						<td id="t12" class="blue" data-r="1" data-c="2">1</td>
+						<td id="t13" class="red" data-r="1" data-c="3">2</td>
+						<td id="t14" class="blue" data-r="1" data-c="4">3</td>
+					</tr>
+					<tr>
+						<td id="t21" class="blue" data-r="2" data-c="1">4</td>
+						<td id="t22" class="red" data-r="2" data-c="2">5</td>
+						<td id="t23" class="blue" data-r="2" data-c="3">6</td>
+						<td id="t24" class="red" data-r="2" data-c="4">7</td>
+					</tr>
+					<tr>
+						<td id="t31" class="red" data-r="3" data-c="1">8</td>
+						<td id="t32" class="blue" data-r="3" data-c="2">9</td>
+						<td id="t33" class="red" data-r="3" data-c="3">10</td>
+						<td id="t34" class="blue" data-r="3" data-c="4">11</td>
+					</tr>
+					<tr>
+						<td id="t41" class="blue" data-r="4" data-c="1">12</td>
+						<td id="t42" class="red" data-r="4" data-c="2">13</td>
+						<td id="t43" class="blue" data-r="4" data-c="3">14</td>
+						<td id="t44" class="red" data-r="4" data-c="4">15</td>
+					</tr>
 				</table>
 				<br>
 				<table class="glowing-puzzle-game-target">
 					<tr>
 						<td class="white" data-r="1" data-c="1">0</td>
-						<td class="red" data-r="1" data-c="2">1</td>
-						<td class="blue" data-r="1" data-c="3">2</td>
-						<td class="blue" data-r="1" data-c="4">2</td>
+						<td class="red" data-r="1" data-c="2">2</td>
+						<td class="blue" data-r="1" data-c="3">1</td>
+						<td class="blue" data-r="1" data-c="4">3</td>
 					</tr>
 					<tr>
-						<td class="red" data-r="2" data-c="1">1</td>
-						<td class="red" data-r="2" data-c="2">1</td>
-						<td class="blue" data-r="2" data-c="3">2</td>
-						<td class="blue" data-r="2" data-c="4">2</td>
+						<td class="red" data-r="2" data-c="1">5</td>
+						<td class="red" data-r="2" data-c="2">7</td>
+						<td class="blue" data-r="2" data-c="3">4</td>
+						<td class="blue" data-r="2" data-c="4">6</td>
 					</tr>
 					<tr>
-						<td class="red" data-r="3" data-c="1">1</td>
-						<td class="red" data-r="3" data-c="2">1</td>
-						<td class="blue" data-r="3" data-c="3">2</td>
-						<td class="blue" data-r="3" data-c="4">2</td>
+						<td class="red" data-r="3" data-c="1">8</td>
+						<td class="red" data-r="3" data-c="2">10</td>
+						<td class="blue" data-r="3" data-c="3">9</td>
+						<td class="blue" data-r="3" data-c="4">11</td>
 					</tr>
 					<tr>
-						<td class="red" data-r="4" data-c="1">1</td>
-						<td class="red" data-r="4" data-c="2">1</td>
-						<td class="blue" data-r="4" data-c="3">2</td>
-						<td class="blue" data-r="4" data-c="4">2</td>
+						<td class="red" data-r="4" data-c="1">13</td>
+						<td class="red" data-r="4" data-c="2">15</td>
+						<td class="blue" data-r="4" data-c="3">12</td>
+						<td class="blue" data-r="4" data-c="4">14</td>
 					</tr>
 				</table>
 			</div>
@@ -89,117 +159,7 @@
     </section>
       
     <footer></footer>
-    <script type="application/javascript">
-		var up="up";
-		var down="down";
-		var left="left";
-		var right="right";
-		var tds = document.querySelectorAll(".glowing-puzzle-game td");
-		document.onkeydown = function(e){
-			var whitepos = document.querySelector(".glowing-puzzle-game td.white");
-			var canmove = false;
-			switch(e.which){
-				case 38:{//up
-					e.preventDefault();
-					canmove = canMove(whitepos, up);
-					if(canmove){
-						move(whitepos, up);
-					}
-					break;
-				}
-				case 40:{//down
-					e.preventDefault();
-					canmove = canMove(whitepos, down);
-					if(canmove){
-						move(whitepos, down);
-					}
-					break;
-				}
-				case 37:{//left
-					e.preventDefault();
-					canmove = canMove(whitepos, left);
-					if(canmove){
-						move(whitepos, left);
-					}
-					break;
-				}
-				case 39:{//right
-					e.preventDefault();
-					canmove = canMove(whitepos, right);
-					if(canmove){
-						move(whitepos, right);
-					}
-					break;
-				}
-			}
-		}
-		function canMove(whiteblock, direction){
-			var canmove = false;
-			switch(direction){
-				case up:{
-					canmove = whiteblock.dataset.r>1;
-					break;
-				}
-				case down:{
-					canmove = whiteblock.dataset.r<4;
-					break;
-				}
-				case left:{
-					canmove = whiteblock.dataset.c>1;
-//					if(canmove){
-//						var row=parseInt(whiteblock.dataset.r);
-//						var col=parseInt(whiteblock.dataset.c);
-//						var leftblock = document.querySelector("td#t"+row+(col-1));
-//						canmove = (leftblock.className != "red");
-//					}
-					break;
-				}
-				case right:{
-					canmove = whiteblock.dataset.c<4;
-					break;
-				}
-			}
-			return canmove;
-		}
-		function move(whiteblock, direction){
-			console.log(direction);
-			var row=parseInt(whiteblock.dataset.r);
-			var col=parseInt(whiteblock.dataset.c);
-			switch(direction){
-				case up:{
-					var upblock = document.querySelector("td#t"+(row-1)+col);
-					switchBlock(whiteblock, upblock);
-					break;
-				}
-				case down:{
-					var downblock = document.querySelector("td#t"+(row+1)+col);
-					switchBlock(whiteblock, downblock);
-					break;
-				}
-				case left:{
-					var leftblock = document.querySelector("td#t"+row+(col-1));
-					switchBlock(whiteblock, leftblock);
-					break;
-				}
-				case right:{
-					var rightblock = document.querySelector("td#t"+row+(col+1));
-					switchBlock(whiteblock, rightblock);
-					break;
-				}
-			}
-			var counter = parseInt(document.querySelector("#counterlabel").innerText);
-			counter+=1;
-			document.querySelector("#counterlabel").innerText=counter;
-		}
-		function switchBlock(block1, block2){
-			var block2class=block2.classList[0];
-			var block2value=block2.innerText;
-			block2.className = block1.className;
-			block2.innerText = block1.innerText;
-			block1.className = block2class;
-			block1.innerText = block2value;
-		}
-	</script>
+    <script type="application/javascript" src="../../js/index.js"></script>
     <script type="application/javascript" src="../../javascript/main.js"></script>
 
 </body>

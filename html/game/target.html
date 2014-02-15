@@ -55,7 +55,33 @@
 						<td id="t44" class="red" data-r="4" data-c="4">1</td>
 					</tr>
 				</table>
-				
+				<br>
+				<table class="glowing-puzzle-game-target">
+					<tr>
+						<td class="white" data-r="1" data-c="1">0</td>
+						<td class="red" data-r="1" data-c="2">1</td>
+						<td class="blue" data-r="1" data-c="3">2</td>
+						<td class="blue" data-r="1" data-c="4">2</td>
+					</tr>
+					<tr>
+						<td class="red" data-r="2" data-c="1">1</td>
+						<td class="red" data-r="2" data-c="2">1</td>
+						<td class="blue" data-r="2" data-c="3">2</td>
+						<td class="blue" data-r="2" data-c="4">2</td>
+					</tr>
+					<tr>
+						<td class="red" data-r="3" data-c="1">1</td>
+						<td class="red" data-r="3" data-c="2">1</td>
+						<td class="blue" data-r="3" data-c="3">2</td>
+						<td class="blue" data-r="3" data-c="4">2</td>
+					</tr>
+					<tr>
+						<td class="red" data-r="4" data-c="1">1</td>
+						<td class="red" data-r="4" data-c="2">1</td>
+						<td class="blue" data-r="4" data-c="3">2</td>
+						<td class="blue" data-r="4" data-c="4">2</td>
+					</tr>
+				</table>
 			</div>
 
         </section><!-- #main_content end -->
@@ -120,12 +146,12 @@
 				}
 				case left:{
 					canmove = whiteblock.dataset.c>1;
-					if(canmove){
-						var row=parseInt(whiteblock.dataset.r);
-						var col=parseInt(whiteblock.dataset.c);
-						var leftblock = document.querySelector("td#t"+row+(col-1));
-						canmove = (leftblock.className != "red");
-					}
+//					if(canmove){
+//						var row=parseInt(whiteblock.dataset.r);
+//						var col=parseInt(whiteblock.dataset.c);
+//						var leftblock = document.querySelector("td#t"+row+(col-1));
+//						canmove = (leftblock.className != "red");
+//					}
 					break;
 				}
 				case right:{
